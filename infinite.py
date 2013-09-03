@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import sys
 import random
 
 def trial():
@@ -8,7 +9,7 @@ def trial():
     i = i*2
   return i
 
-trials = 10000000
+trials = int(sys.argv[1]) if len(sys.argv) > 1 else 10000000
 
 s = 0.0
 for i in xrange(trials):
